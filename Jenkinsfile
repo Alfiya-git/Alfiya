@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy Docker Container') {
             steps {
                 script {
-                     sh "docker run -itd -p 80:80 stacksimplify/kube-nginxapp1:1.0.0"
+                     sh "docker run -itd -p 80:8082 stacksimplify/kube-nginxapp1:1.0.0"
 
                     }
                 }
