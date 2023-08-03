@@ -8,10 +8,10 @@ pipeline {
             }
         }
 
-        stage('Deploy Docker Container') {
+        stage('kube-deploy') {
             steps {
                 script {
-                     sh "docker run -itd -p 80:8082 stacksimplify/kube-nginxapp1:1.0.0"
+                     sh "kubectl apply -f /app1"
 
                     }
                 }
