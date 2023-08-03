@@ -11,7 +11,8 @@ pipeline {
         stage('kube-deploy') {
             steps {
                 script {
-                     sh "kubectl apply -f /app1"
+                     sh "kubectl apply -f 01-Nginx-App1-Deployment-and-NodePortService.yml"
+                     sh "kubectl apply -f 02-App1-Ingress.yml"
 
                     }
                 }
